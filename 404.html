@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · GP Song Tools</title>
+<style>
+:root{--bg:#f6f5f2;--text:#1c1b19;--muted:#6b675f;--accent:#c2410c}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--text:#f1efe9;--muted:#a39f96;--accent:#fb923c}}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:480px;margin:15vh auto;padding:0 16px}
+a{color:var(--accent)}
+p{color:var(--muted)}
+</style>
+<script>
+// Old addresses that moved. GitHub Pages shows this page for any missing path,
+// so forward old links (including deeper ones) to the same place at the new address.
+(function () {
+  var MOVED = { "/suno-style-creator/": "/gp-blueprint/" };
+  var p = location.pathname;
+  for (var from in MOVED) {
+    if (p === from.slice(0, -1) || p.indexOf(from) === 0) {
+      location.replace(MOVED[from] + p.slice(from.length) + location.search + location.hash);
+      return;
+    }
+  }
+})();
+</script>
+</head>
+<body>
+<main>
+<h1>Page not found</h1>
+<p>There's nothing at this address. It may have moved.</p>
+<p><a href="/toolsmenu/">See all the GP Song Tools</a></p>
+</main>
+</body>
+</html>
